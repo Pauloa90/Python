@@ -1,11 +1,12 @@
 import random
 import time
-alunos = ['Joao', 'Jessica', 'Paulo', 'Carol']
-n = random.randint(1, 4)
-print('Os alunos sao:')
-for x in alunos:
-    print(x)
-print('Entre esses o sorteado foi:')
-time.sleep(2)
 
-print(alunos[n])
+n1 = str(input('Digite o nome do aluno: '))
+n2 = str(input('Digite o nome do segundo aluno: '))
+n3 = str(input('Digite o nome do terceiro aluno: '))
+n4 = str(input('Digite o nome do quarto aluno: '))
+
+alunos = [n1, n2, n3, n4]
+escolhido = random.choice(alunos)
+print('O aluno escolhido foi: {}'.format(escolhido))
+    
