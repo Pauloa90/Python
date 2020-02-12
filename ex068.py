@@ -5,14 +5,15 @@ print('-'*20)
 print('Vamos Jogar Par ou Impar!')
 print('-'*20)
 
-pc = randint(1, 10)
-c = 0
 v = 0
+
 while True:
     n = int(input('Digite um numero: '))
-    res = str(input('Par ou Impar [P/I] ')).strip().upper()[0]
-    pc = randint(1, 10)   
-    c += 1
+    pc = randint(0, 10)
+    res = ' '
+    while res not in 'PI':
+        res = str(input('Par ou Impar [P/I] ')).strip().upper()[0] 
+    print(f'Voce jogou {n} e computador jogou {pc}')
     if res == 'P' and (pc + n) % 2 == 0:
         v += 1
         print('Voce ganhou! Jogue Novamente!')
