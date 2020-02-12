@@ -1,11 +1,14 @@
-p = int(input('Digite o primeiro termo de uma PA: '))
-r = int(input('Digite a razao da PA:  '))
+print('-'*20)
+print('Gerador de Pa!')
 
-c = 1
+p = int(input('Primeiro Termo: '))
+r = int(input('Razao da Pa: '))
+
 termo = p
+c = 1
 
-while c < 11:
-    print('{} '.format(termo), end='')
+while c <= 10:
+    print('{} - '.format(termo), end='')
     termo += r
     c += 1
-print('FIM')
+
