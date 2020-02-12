@@ -4,14 +4,17 @@ print('-'*20)
 totalpeople = 0
 men = 0
 women20 = 0
-sexo =''
+
 
 while True:
     idade = int(input('Digite a idade: '))
+    sexo = ' '
     while sexo not in 'MmFf':
         sexo = str(input('Digite o sexo [M / F]: ')).strip().upper()[0]
     print('-'*20)
-    res = str(input('Deseja continuar [S / N]: ')).strip().upper()[0]
+    res = ' '
+    while res not in 'SsNn':
+        res = str(input('Deseja continuar [S / N]: ')).strip().upper()[0]
     print('-'*20)
     if idade > 18:
         totalpeople += 1

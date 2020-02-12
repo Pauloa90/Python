@@ -9,12 +9,15 @@ while True:
     notacinq =  valor // 50
     notavinte = (valor % 50)//20
     notaum = (valor % 50) % 20
-    res = str(input('Deseja continuar [S / N]')).strip().upper()[0]
     print(f' O valor R${valor} será entregue em:')
     print(f'{notacinq} em notas de R$50')
     print(f'{notavinte} em notas de R$20')
     print(f'{notaum} em notas de R$1')
-    if res == 'N':
+    res = ' '
+    while res not in 'SsNn':
+        res = str(input('Deseja continuar [S / N]')).strip().upper()[0]
+    if res in 'Nn':
         break
-
+    
+    
 
