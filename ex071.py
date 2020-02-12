@@ -19,5 +19,3 @@ while True:
     if res in 'Nn':
         break
     
-    
-
