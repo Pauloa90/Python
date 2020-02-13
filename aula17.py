@@ -46,7 +46,7 @@ print(tabela)
 for l, numero in enumerate(tabela):
     print(f'Encontrei o {numero} na posicao {l}')
 
-a = [2, 3, 4, 6]
+a = [2, 3, 4, 6]r
 b = a[:]
 b.append(10)
 print(a, b)
