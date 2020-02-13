@@ -15,8 +15,8 @@ print(brasileiro[-4:])
 print('-'*20)
 print('Em ordem alfabetica:')
 
-for t in brasileiros:
-    print(sorted(brasileiro)[t])
 
-print('-'*20)
+print(sorted(brasileiro))
+
+
 print(f'O Palmeiras está na posicao {brasileiro.index("Palmeiras")}')

@@ -1,4 +1,6 @@
 lanche = ('Hamburguer', 'Suco', 'Salada', 'Pudim')
+
+
 print(lanche[-2:])
 
 # Tuplas sao Imutaveis!!!
@@ -30,3 +32,9 @@ pessoa = ('Gustavo', 39, 'M', 99.88)
 print(pessoa)
 
 del(pessoa)
+
+
+letras = ('a', 'b', 'c', 'd')
+for x in letras:
+    print(x)
+print(letras[-1])
