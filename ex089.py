@@ -1,26 +1,28 @@
-from random import randint
-from time import sleep
-lista = list()
-jogos = list()
-print('-'*30)
-print('Vamos Jogar na Mega Sena!!!')
-print('-'*30)
-quant = int(input('Quantos jogos desejam sortear? '))
-tot = 1
-while tot <= quant:
-    cont = 0
-    while True:
-        num = randint(1, 60)
-        if num not in lista:
-            lista.append(num)
-            cont += 1
-        if cont >= 6: 
-            break
-    lista.sort()   
-    jogos.append(lista[:])
-    lista.clear()
-    tot += 1
-print('-=' * 3, f' Sorteado {quant} Jogos!', '-='*3)
-for i, l in enumerate(jogos):
-    print(f'Jogo {i+1}: {l}')
-    sleep(.8)
+aluno = list()
+alunos = list()
+
+while True:
+    aluno.append(str(input('Digite o nome do Aluno: ')))
+    aluno.append(float(input('Digite a primeira nota: ')))
+    aluno.append(float(input('Digite a segunda nota: ')))
+    
+    media = (aluno[1]+aluno[2])/2
+    aluno.append(media)
+    alunos.append(aluno[:])
+    aluno.clear()
+    res = str(input('Deseja continuar? [S/N]')).strip().upper()[0]
+    if res in 'Nn':
+        break
+
+print('-='*10)
+print(f'{"No.":<4}{"Nome":<10}{"Media":>8}')
+print('-='*10)
+
+for i, l in enumerate(alunos):
+    print(f'{i:<4}{l[0]:<10} {l[3]:>8.1f}')
+while True:
+    res = int(input('Mostrar notas de qual aluno? (999 interrompe): '))
+    if res == 999:
+        break
+    print(f'As notas de {alunos[res][0]} sao {alunos[res][1]} e {alunos[res][2]}')
+print('Obrigado e Boa Sorte!')
