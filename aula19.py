@@ -3,15 +3,11 @@ filme = {
     'ano': 1977,
     'diretor': 'George Lucas'
 }
-print(filme['ano'])
-print(filme.values())
-print(filme.keys())
-print(filme.items())
-for k, v in filme.items():
-    print(f'O {k} é {v}')
+
+
 locadora = list()
 locadora.append(filme)
-print(locadora[0]['ano'])
+
 
 for x in filme.keys():
     print(x)
@@ -32,4 +28,15 @@ estado2 = {'uf': 'Rio de Janeiro', 'singla': 'RJ'}
 estado3 = {'uf': 'Sao Paulo', 'sigla': 'SP'}
 brasil.append(estado1)
 brasil.append(estado2)
-print(brasil)
+
+
+
+estado = dict()
+pais = list()
+for c in range(0, 3):
+    estado['uf'] = str(input('Unidade Federativa: '))
+    estado['sigla'] = str(input('Sigla do Estado: '))
+    pais.append(estado.copy())
+for e in pais:
+    for k, v in e.items():
+        print(f'O campo {k} tem valor {v}')
